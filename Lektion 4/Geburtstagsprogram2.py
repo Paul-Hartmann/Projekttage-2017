@@ -6,7 +6,15 @@ while True:
 
    a = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"]
 
-   monat = a.index(monat) +1
+   try:
+      monat = int(monat)
+   except:
+      try:
+          monat = a.index(monat)+1
+      except:
+          print("UNGÜLTIGE EINGABE!!!\n\n")
+          continue
+
    if tag == 28 and monat == 7:
        print("Herzlichen Glückwunsch zu deinem Geburtstag, Du wirst Heute", 2017-Jahr, "Jahre alt")
 
@@ -19,7 +27,7 @@ while True:
 
    else:
        print("")
-                   
+
     
    if Jahr > 2017:
       print("Du schumler")
